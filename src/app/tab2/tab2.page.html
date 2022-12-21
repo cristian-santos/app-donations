@@ -9,7 +9,7 @@
 <ion-content>
   <ion-content>
     <div class="conteudo animate__animated animate__fadeInLeft">
-      <ion-card>
+      <ion-card (click)="doarAlimentos()">
         <ion-item lines="none">
           <ion-thumbnail slot="start">
             <img
@@ -20,7 +20,7 @@
         </ion-item>
       </ion-card>
   
-      <ion-card>
+      <ion-card (click)="doarRoupas()">
         <ion-item lines="none">
           <ion-thumbnail slot="start">
             <img
@@ -31,7 +31,7 @@
         </ion-item>
       </ion-card>
   
-      <ion-card>
+      <ion-card (click)="doarSangue()">
         <ion-item lines="none">
           <ion-thumbnail slot="start">
             <img
