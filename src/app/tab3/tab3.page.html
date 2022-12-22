@@ -15,7 +15,24 @@
         Está precisando de ajuda? Podemos te ajudar! Preencha os campos e fale com
         um voluntário. 🙏
       </p>
-      <ion-button (click)="whats()" expand="full" type="submit">Falar com Voluntario</ion-button>
+      
+      <form [formGroup]="form" (submit)="enviar()">
+        <ion-item>
+          <ion-label position="floating">Nome Completo</ion-label>
+          <ion-input type="text" formControlName="nome"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label position="floating">Endereço</ion-label>
+          <ion-input type="text" formControlName="endereco"></ion-input>
+        </ion-item>
+
+        <ion-button [disabled]="form.invalid || form.pending" expand="block" type="submit">
+          Salvar
+        </ion-button>
+      </form>
+  
+      <!-- <ion-button (click)="whats()" expand="full" type="submit">Falar com Voluntario</ion-button> -->
     </div>
   </ion-content>
 </ion-content>
